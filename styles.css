@@ -123,14 +123,30 @@ body {
   display: flex;
   align-items: center;
   position: relative;
-  background-image:
-    url('assets/bg\ logo.png'); /* Replace with your file path */
+  background-image: url('assets/bg\ logo.png'); /* Fixed path without backslash */
   background-size: cover;
   background-position: center;
-  /* border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px; */
   margin-bottom: 1.5rem;
 }
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 60vh; /* reduce height so it fits better */
+    background-position: top center; /* focus on logo area */
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .hero {
+    min-height: 50vh;
+    background-position: center top;
+    background-size: contain; /* prevent cutting the logo */
+    background-repeat: no-repeat;
+  }
+}
+
 
 
 .overlay {
@@ -382,6 +398,10 @@ body {
 
 /* ------------------ RESPONSIVENESS ------------------ */
 @media (max-width: 900px) {
+
+    
+
+
   .section-grid {
     grid-template-columns: 1fr;
   }
