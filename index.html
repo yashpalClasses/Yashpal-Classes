@@ -9,17 +9,22 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/png" href="assets/logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <header id="header" class="site-header">
+    
     <div class="container nav-inner">
       <a class="brand" href="#home">Yashpal Classes</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span class="hamburger"></span>
-      </button>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </button>
+
       <nav class="nav" id="nav">
         <ul>
           <li><a href="#home" class="nav-link">Home</a></li>
@@ -160,38 +165,65 @@
             </form>
           </div>
 
-          <div class="card contact-card" data-aos="fade-left" data-aos-duration="800">
-            <h3>Contact Info</h3>
-            <p><strong>Phone:</strong> <a href="tel:+919354180547">+91 93541 80547</a></p>
-            <p><strong>Address:</strong><br>Prem Nagar - 2, Kirari, Delhi</p>
-            <div class="map-wrap">
-              <iframe
-                title="Yashpal Classes Map"
-                src="https://www.google.com/maps?q=Prem+Nagar+2+Kirari+Delhi&output=embed"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <p class="small muted">Office hours: Mon — Sat, 9:00 AM — 6:00 PM</p>
-          </div>
+         <div class="card contact-card" data-aos="fade-left" data-aos-duration="800">
+  <h3>Contact Info</h3>
+  <p><strong>Phone:</strong> <a href="tel:+919354180547">+91 93541 80547</a></p>
+  <p><strong>Address:</strong><br>Prem Nagar - 2, Kirari, Delhi</p>
+
+  <div class="map-wrap" style="height:300px;">
+    <iframe
+      title="Yashpal Classes Map"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.43812345678!2d77.0570765!3d28.6956544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0520993141dd%3A0xf2c64f6e9075e97b!2sYashpal%20Classes!5e0!3m2!1sen!2sin!4v1723280000000"
+      width="100%"
+      height="100%"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <p class="small muted">Office hours: Mon — Sat, 9:00 AM — 6:00 PM</p>
+</div>
+
         </div>
       </div>
     </section>
 
   </main>
 
-  <a class="whatsapp-float" href="https://wa.me/919354180547" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M21.7 4.3a11 11 0 10-15.6 15.6L3 21l1.1-3.1A11 11 0 0021.7 4.3z" fill="#fff"/>
-      <path d="M17.1 14.1c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.2-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.5.1-.7.1-.2.3-.5.4-.7.1-.2.1-.4 0-.6-.1-.1-.7-1.7-.9-2.3-.2-.6-.4-.4-.6-.4-.2 0-.5 0-.8 0-.3 0-.7.1-1 .4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.1 3 .1.1 1.8 3 4.4 4.2 3 .1 3.5-1.9 3.6-2.1.1-.1.1-.4 0-.5-.1-.1-.3-.3-.6-.4z" fill="#25D366"/>
-    </svg>
-  </a>
+    <a class="whatsapp-float" href="https://wa.me/919354180547" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <img src="assets/whats app logo.png" alt="WhatsApp Logo">
+    </a>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>© <span id="year"></span> Yashpal Classes — All Rights Reserved.</div>
-      <div>Contact: <a href="tel:+919354180547">+91 93541 80547</a></div>
+   <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>Yashpal Classes</h3>
+      <p>Quality tuition for Classes 1–12 in Delhi. Focused on conceptual clarity and proven results.</p>
     </div>
-  </footer>
+
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p><strong>Phone:</strong> <a href="tel:+919354180547">+91 93541 80547</a></p>
+      <p><strong>Address:</strong> Prem Nagar - 2, Kirari, Delhi</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#courses">Our Classes</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Yashpal Classes — All Rights Reserved.</p>
+  </div>
+</footer>
+
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>

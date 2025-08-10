@@ -43,9 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
     enquiryForm.addEventListener('submit', (event) => {
       event.preventDefault(); // Prevent default form submission
 
-      // Here you would typically send the form data to a server
-      // For this example, we will just show a confirmation message
-      
+      // Typically send data to server here
+      // For now, show confirmation message
+
       const submitBtn = document.getElementById('submitBtn');
       submitBtn.textContent = 'Message Sent!';
       submitBtn.disabled = true;
@@ -58,4 +58,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-
