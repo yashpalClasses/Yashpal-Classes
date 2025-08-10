@@ -465,9 +465,8 @@ html {
     /* Slide the menu into view */
     transform: translateX(0);
   }
-}
 
-  .nav ul {
+   .nav ul {
     flex-direction: column;
     padding: 1.2rem;
   }
@@ -515,4 +514,7 @@ html {
     margin-top: 10px;
   }
 }
-}
+
+ 
+
+
