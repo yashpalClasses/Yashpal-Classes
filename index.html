@@ -1,223 +1,176 @@
-<!DOCTYPE html>
+<!-- index.html -->
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Yashpal Classes — Classes 1 to 12</title>
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css" />
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" 
-    rel="stylesheet" 
-  />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- WhatsApp Floating Button -->
-  <a 
-    class="whatsapp-float" 
-    href="https://wa.me/919354180547" 
-    target="_blank" 
-    rel="noreferrer"
-  >
-    <img 
-      src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" 
-      alt="WhatsApp" 
-    />
-  </a>
-
-  <!-- Hero Section -->
-  <header id="hero" class="hero">
-    <div class="overlay"></div>
-    
-    <!-- Navigation -->
-    <nav class="nav container">
-      <div class="brand">Yashpal <span>Classes</span></div>
-
-      <!-- Hamburger Menu -->
-      <button class="nav-toggle" aria-label="Toggle Menu">
+  <!-- NAV -->
+  <header id="header" class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="#home">Yashpal Classes</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
         <span class="hamburger"></span>
       </button>
-
-      <!-- Nav Links -->
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#classes">Classes</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#enquiry">Enquiry</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- Hero Content -->
-    <div class="hero-content container">
-      <h1>Yashpal Classes</h1>
-      <p class="tag">
-        Quality tuition for students of <strong>Class 1 to 12</strong>
-      </p>
-      <div class="hero-cta">
-        <a class="btn" href="#enquiry">Enquire Now</a>
-        <a class="btn ghost" href="tel:+919354180547">Call: +91 93541 80547</a>
-      </div>
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#subjects" class="nav-link">Subjects</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
+  <!-- HERO -->
   <main>
-    <!-- About Section -->
-    <section id="about" class="section container">
-      <div class="section-grid">
-        <div class="card">
-          <h2>About Yashpal Classes</h2>
-          <p>
-            Welcome to <strong>Yashpal Classes</strong> — a focused tuition centre in Prem Nagar -2, Kirari.
-            We provide personalised attention, clear concept-building, and exam-oriented practice for students from
-            <strong>Class 1 to 12</strong>.
-          </p>
-          <p>
-            Teaching approach: Simple language, lots of examples, regular tests, and homework to track progress.
-          </p>
-          <p><strong>Location:</strong> Prem Nagar - 2, Kirari</p>
-        </div>
-
-        <div class="card">
-          <h3>Why Choose Us?</h3>
-          <ul>
-            <li>Experienced and patient teaching</li>
-            <li>Small batches for personalised attention</li>
-            <li>Exam-focused notes & mock tests</li>
-            <li>Affordable fees</li>
-          </ul>
+    <section id="home" class="hero">
+      <div class="overlay"></div>
+      <div class="container hero-content">
+        <h1>Yashpal Classes</h1>
+        <p class="tag">Quality Tuition for Classes 1 to 12</p>
+        <div class="hero-ctas">
+          <a href="tel:+919354180547" class="btn primary">Call Now</a>
+          <a href="#about" class="btn ghost">Learn More</a>
         </div>
       </div>
     </section>
 
-    <!-- Classes Section -->
-    <section id="classes" class="section alt-bg container">
-      <h2>Classes & Subjects</h2>
-      <p class="lead">
-        We teach students from <strong>Class 1 to Class 12</strong>. Subjects include:
-      </p>
-      <div class="subjects-grid">
-        <div class="subject">Mathematics</div>
-        <div class="subject">Science (Physics, Chemistry, Biology)</div>
-        <div class="subject">English</div>
-        <div class="subject">Social Science</div>
-        <div class="subject">Hindi</div>
-        <div class="subject">Computer Science / Basics</div>
-      </div>
-      <p class="small">
-        For subject-wise batches and timetable, contact us on WhatsApp or call.
-      </p>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="section container">
-      <h2>Gallery</h2>
-      <p class="lead">Placeholder images — replace these with your class photos.</p>
-      <div class="gallery-grid">
-        <img src="https://picsum.photos/seed/1/600/400" alt="Classroom Photo 1" />
-        <img src="https://picsum.photos/seed/2/600/400" alt="Classroom Photo 2" />
-        <img src="https://picsum.photos/seed/3/600/400" alt="Classroom Photo 3" />
-        <img src="https://picsum.photos/seed/4/600/400" alt="Classroom Photo 4" />
-      </div>
-    </section>
-
-    <!-- Enquiry Section -->
-    <section id="enquiry" class="section container">
-      <div class="enquiry-grid">
-        <div>
-          <h2>Enquiry Form</h2>
-          <p class="lead">
-            Fill this short form and we will contact you soon on WhatsApp or call.
-          </p>
-
-          <form id="enquiry-form">
-            <label for="name">Parent / Student Name</label>
-            <input id="name" name="name" required />
-
-            <label for="phone">Phone (WhatsApp)</label>
-            <input 
-              id="phone" 
-              name="phone" 
-              required 
-              pattern="[0-9]{10}" 
-              placeholder="9354180547" 
-            />
-
-            <label for="class">Class</label>
-            <select id="class" name="class">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              <option>6</option>
-              <option>7</option>
-              <option>8</option>
-              <option>9</option>
-              <option>10</option>
-              <option>11</option>
-              <option>12</option>
-            </select>
-
-            <label for="message">Message (optional)</label>
-            <textarea id="message" name="message" rows="4"></textarea>
-
-            <button class="btn" type="submit">Send Enquiry</button>
-          </form>
-
-          <p class="small">
-            Note: This form is placeholder-only. On submit it will save locally in your browser.
-            Ask me if you want it connected to Google Forms or Formspree.
-          </p>
-        </div>
-
-        <!-- Contact Info -->
-        <aside class="contact-card">
-          <h3>Contact</h3>
-          <p><strong>Phone:</strong> <a href="tel:+919354180547">+91 93541 80547</a></p>
-          <p><strong>WhatsApp:</strong> 
-            <a href="https://wa.me/919354180547" target="_blank" rel="noreferrer">Chat on WhatsApp</a>
-          </p>
-          <p><strong>Address:</strong> Prem Nagar - 2, Kirari</p>
-
-          <div class="map">
-            <iframe
-              src="https://www.google.com/maps?q=Prem+Nagar+-2+Kirari&output=embed"
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-grid">
+          <div class="card about-card">
+            <h2>About Yashpal Classes</h2>
+            <p>Located in Prem Nagar - 2, Kirari, Delhi, Yashpal Classes provides personalised tuition for students from 1st to 12th standard across all core subjects. We focus on strong fundamentals, conceptual clarity, and consistent practice to build confidence and deliver results.</p>
+            <ul class="features">
+              <li>Experienced & caring faculty</li>
+              <li>Small batch sizes & doubt clearing</li>
+              <li>Result-oriented approach & regular tests</li>
+            </ul>
           </div>
-        </aside>
+          <div class="card stats-card">
+            <h3>Our Approach</h3>
+            <p>Interactive lessons, regular assessments, individualized doubt sessions and a disciplined learning environment.</p>
+            <div class="stat-list">
+              <div class="stat">
+                <div class="stat-num">1 - 12</div>
+                <div class="stat-label">Classes Covered</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">All Subjects</div>
+                <div class="stat-label">Maths, Science, English, Hindi & more</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">On-going</div>
+                <div class="stat-label">Regular batches & weekend classes</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer id="contact" class="section footer container">
-      <div class="footer-grid">
-        <div>
-          <h3>Yashpal Classes</h3>
-          <p>Prem Nagar - 2, Kirari</p>
-          <p><a href="tel:+919354180547">+91 93541 80547</a></p>
-        </div>
-        <div>
-          <h4>Follow</h4>
-          <p>
-            <a href="https://wa.me/919354180547" target="_blank" rel="noreferrer">WhatsApp</a>
-          </p>
+    <!-- SUBJECTS -->
+    <section id="subjects" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Subjects We Teach</h2>
+        <div class="subjects-grid">
+          <div class="subject-card">Mathematics</div>
+          <div class="subject-card">Science</div>
+          <div class="subject-card">English</div>
+          <div class="subject-card">Social Science</div>
+          <div class="subject-card">Hindi</div>
+          <div class="subject-card">Computer / ICT</div>
+          <div class="subject-card">SST (History / Geography)</div>
+          <div class="subject-card">Exam Preparation & Revision</div>
         </div>
       </div>
-      <p class="copyright">
-        &copy; <span id="year"></span> Yashpal Classes — All rights reserved.
-      </p>
-    </footer>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section">
+      <div class="container">
+        <h2 class="section-title">Gallery</h2>
+        <p class="muted">(Placeholder images — replace with your photos)</p>
+        <div class="gallery-grid">
+          <figure class="gallery-item"><img src="https://source.unsplash.com/collection/894/800x600" alt="classroom" loading="lazy"><figcaption>Classroom</figcaption></figure>
+          <figure class="gallery-item"><img src="https://source.unsplash.com/collection/190727/800x600" alt="students studying" loading="lazy"><figcaption>Students learning</figcaption></figure>
+          <figure class="gallery-item"><img src="https://source.unsplash.com/collection/928423/800x600" alt="teaching" loading="lazy"><figcaption>Teaching session</figcaption></figure>
+          <figure class="gallery-item"><img src="https://source.unsplash.com/collection/139386/800x600" alt="books" loading="lazy"><figcaption>Study materials</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Contact & Enquiry</h2>
+        <div class="section-grid">
+          <div class="card form-card">
+            <form id="enquiryForm" onsubmit="return false;">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+
+              <label for="class">Class</label>
+              <input type="text" id="class" name="class" placeholder="e.g. 8 or 12 - Science" required>
+
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Subject of interest" required>
+
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Your message or questions"></textarea>
+
+              <div class="form-actions">
+                <button class="btn primary" type="submit" id="submitBtn">Send Enquiry</button>
+                <button class="btn ghost" type="reset">Reset</button>
+              </div>
+              <p class="muted small">*Form is front-end only. Integrate with a backend/email service to receive submissions.</p>
+            </form>
+          </div>
+
+          <div class="card contact-card">
+            <h3>Contact Info</h3>
+            <p><strong>Phone:</strong> <a href="tel:+919354180547">+91 93541 80547</a></p>
+            <p><strong>Address:</strong><br>Prem Nagar - 2, Kirari, Delhi</p>
+            <div class="map-wrap">
+              <iframe
+                title="Yashpal Classes Map"
+                src="https://www.google.com/maps?q=Prem+Nagar+2+Kirari+Delhi&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <p class="small muted">Office hours: Mon — Sat, 9:00 AM — 6:00 PM</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- Scripts -->
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <a class="whatsapp-float" href="https://wa.me/919354180547" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M21.7 4.3a11 11 0 10-15.6 15.6L3 21l1.1-3.1A11 11 0 0021.7 4.3z" fill="#25D366"/>
+      <path d="M17.1 14.1c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.2-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.5.1-.7.1-.2.3-.5.4-.7.1-.2.1-.4 0-.6-.1-.1-.7-1.7-.9-2.3-.2-.6-.4-.4-.6-.4-.2 0-.5 0-.8 0-.3 0-.7.1-1 .4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.1 3 .1.1 1.8 3 4.4 4.2 3 .1 3.5-1.9 3.6-2.1.1-.1.1-.4 0-.5-.1-.1-.3-.3-.6-.4z" fill="#fff"/>
+    </svg>
+  </a>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Yashpal Classes — All Rights Reserved.</div>
+      <div>Contact: <a href="tel:+919354180547">+91 93541 80547</a></div>
+    </div>
+  </footer>
+
   <script src="index.js"></script>
 </body>
 </html>
