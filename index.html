@@ -1,28 +1,223 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="styles.css">
-    <title>Yashpal Classes</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yashpal Classes — Classes 1 to 12</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" 
+    rel="stylesheet" 
+  />
 </head>
 <body>
-    <header>
-        <div class="logo"><img src="assets/yashpal logo.jpg" alt="logo"></div>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#price">Price</a>
-            <a href="#notes">Notes</a>
-            <a href="#classes">Classes</a>
-            <a href="#about">About</a>
-        </nav>
-    </header>
+  <!-- WhatsApp Floating Button -->
+  <a 
+    class="whatsapp-float" 
+    href="https://wa.me/919354180547" 
+    target="_blank" 
+    rel="noreferrer"
+  >
+    <img 
+      src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" 
+      alt="WhatsApp" 
+    />
+  </a>
 
-    <main>
-        <h1>Welcome to Yashpal Classes</h1>
-        <h3>Coming Soon</h3>
-    </main>
+  <!-- Hero Section -->
+  <header id="hero" class="hero">
+    <div class="overlay"></div>
+    
+    <!-- Navigation -->
+    <nav class="nav container">
+      <div class="brand">Yashpal <span>Classes</span></div>
+
+      <!-- Hamburger Menu -->
+      <button class="nav-toggle" aria-label="Toggle Menu">
+        <span class="hamburger"></span>
+      </button>
+
+      <!-- Nav Links -->
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#enquiry">Enquiry</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Content -->
+    <div class="hero-content container">
+      <h1>Yashpal Classes</h1>
+      <p class="tag">
+        Quality tuition for students of <strong>Class 1 to 12</strong>
+      </p>
+      <div class="hero-cta">
+        <a class="btn" href="#enquiry">Enquire Now</a>
+        <a class="btn ghost" href="tel:+919354180547">Call: +91 93541 80547</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- About Section -->
+    <section id="about" class="section container">
+      <div class="section-grid">
+        <div class="card">
+          <h2>About Yashpal Classes</h2>
+          <p>
+            Welcome to <strong>Yashpal Classes</strong> — a focused tuition centre in Prem Nagar -2, Kirari.
+            We provide personalised attention, clear concept-building, and exam-oriented practice for students from
+            <strong>Class 1 to 12</strong>.
+          </p>
+          <p>
+            Teaching approach: Simple language, lots of examples, regular tests, and homework to track progress.
+          </p>
+          <p><strong>Location:</strong> Prem Nagar - 2, Kirari</p>
+        </div>
+
+        <div class="card">
+          <h3>Why Choose Us?</h3>
+          <ul>
+            <li>Experienced and patient teaching</li>
+            <li>Small batches for personalised attention</li>
+            <li>Exam-focused notes & mock tests</li>
+            <li>Affordable fees</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Classes Section -->
+    <section id="classes" class="section alt-bg container">
+      <h2>Classes & Subjects</h2>
+      <p class="lead">
+        We teach students from <strong>Class 1 to Class 12</strong>. Subjects include:
+      </p>
+      <div class="subjects-grid">
+        <div class="subject">Mathematics</div>
+        <div class="subject">Science (Physics, Chemistry, Biology)</div>
+        <div class="subject">English</div>
+        <div class="subject">Social Science</div>
+        <div class="subject">Hindi</div>
+        <div class="subject">Computer Science / Basics</div>
+      </div>
+      <p class="small">
+        For subject-wise batches and timetable, contact us on WhatsApp or call.
+      </p>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section container">
+      <h2>Gallery</h2>
+      <p class="lead">Placeholder images — replace these with your class photos.</p>
+      <div class="gallery-grid">
+        <img src="https://picsum.photos/seed/1/600/400" alt="Classroom Photo 1" />
+        <img src="https://picsum.photos/seed/2/600/400" alt="Classroom Photo 2" />
+        <img src="https://picsum.photos/seed/3/600/400" alt="Classroom Photo 3" />
+        <img src="https://picsum.photos/seed/4/600/400" alt="Classroom Photo 4" />
+      </div>
+    </section>
+
+    <!-- Enquiry Section -->
+    <section id="enquiry" class="section container">
+      <div class="enquiry-grid">
+        <div>
+          <h2>Enquiry Form</h2>
+          <p class="lead">
+            Fill this short form and we will contact you soon on WhatsApp or call.
+          </p>
+
+          <form id="enquiry-form">
+            <label for="name">Parent / Student Name</label>
+            <input id="name" name="name" required />
+
+            <label for="phone">Phone (WhatsApp)</label>
+            <input 
+              id="phone" 
+              name="phone" 
+              required 
+              pattern="[0-9]{10}" 
+              placeholder="9354180547" 
+            />
+
+            <label for="class">Class</label>
+            <select id="class" name="class">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+            </select>
+
+            <label for="message">Message (optional)</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button class="btn" type="submit">Send Enquiry</button>
+          </form>
+
+          <p class="small">
+            Note: This form is placeholder-only. On submit it will save locally in your browser.
+            Ask me if you want it connected to Google Forms or Formspree.
+          </p>
+        </div>
+
+        <!-- Contact Info -->
+        <aside class="contact-card">
+          <h3>Contact</h3>
+          <p><strong>Phone:</strong> <a href="tel:+919354180547">+91 93541 80547</a></p>
+          <p><strong>WhatsApp:</strong> 
+            <a href="https://wa.me/919354180547" target="_blank" rel="noreferrer">Chat on WhatsApp</a>
+          </p>
+          <p><strong>Address:</strong> Prem Nagar - 2, Kirari</p>
+
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps?q=Prem+Nagar+-2+Kirari&output=embed"
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="section footer container">
+      <div class="footer-grid">
+        <div>
+          <h3>Yashpal Classes</h3>
+          <p>Prem Nagar - 2, Kirari</p>
+          <p><a href="tel:+919354180547">+91 93541 80547</a></p>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <p>
+            <a href="https://wa.me/919354180547" target="_blank" rel="noreferrer">WhatsApp</a>
+          </p>
+        </div>
+      </div>
+      <p class="copyright">
+        &copy; <span id="year"></span> Yashpal Classes — All rights reserved.
+      </p>
+    </footer>
+  </main>
+
+  <!-- Scripts -->
+  <script src="index.js"></script>
 </body>
 </html>
