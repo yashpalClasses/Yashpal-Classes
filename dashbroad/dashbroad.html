@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="dashbroad.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <div class="logo">
+        <div class="logo-circle">YP</div>
+        <span class="logo-text">YP Classes</span>
+      </div>
+      <ul class="nav">
+        <li><span class="material-icons">dashboard</span> Dashboard</li>
+        <li><span class="material-icons">school</span> Teachers</li>
+        <li><span class="material-icons">group</span> Students</li>
+        <li><span class="material-icons">payments</span> Fees</li>
+        <li><span class="material-icons">event_available</span> Attendance</li>
+        <li><span class="material-icons">schedule</span> Time Table</li>
+        <li><span class="material-icons">message</span> Message</li>
+        <li><span class="material-icons">settings</span> Settings</li>
+      </ul>
+      <button class="logout">Log Out</button>
+    </aside>
+
+    <main class="main">
+      <section class="main-grid">
+        <div class="card welcome">
+          <h3>Hey Ankush.</h3>
+          <p>Welcome back! We're here to support you on your learning journey. Dive into your classes and keep progressing towards your goals.</p>
+        </div>
+
+        <div class="card notifications">
+          <h4>🔔 Notifications</h4>
+          <div class="note-box">Conduct Test Next Week. Prepare Chapter 3 Exercise 12 and 14.</div>
+        </div>
+
+        <div class="card leaderboard">
+          <h4>Leaderboard</h4>
+          <div class="podium">
+            <div class="second">2<br>Sonu</div>
+            <div class="first">1<br>Monu</div>
+            <div class="third">3<br>Dimple</div>
+          </div>
+          <div class="rank">4 Ankush</div>
+        </div>
+
+        <div class="card profile">
+          <img src="https://via.placeholder.com/100" alt="Student Profile Picture">
+          <h4>12th Class</h4>
+        </div>
+
+        <div class="card attendance">
+          <h4>Attendance</h4>
+          <canvas id="attendanceChart"></canvas>
+        </div>
+
+        <div class="card mentor">
+          <h4>Your Mentor</h4>
+          <div class="mentor-info">
+            <img src="https://via.placeholder.com/80" alt="Mentor Profile Picture">
+            <div>
+              <p><b>Name:</b> Kartik Kumar</p>
+              <p><b>Contact:</b> 8595664069</p>
+              <p>4 Years Experience<br>2000+ Students</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card calendar">
+          <h4>July 2025</h4>
+          <table>
+            <tr>
+              <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+            </tr>
+            <tr><td></td><td class="active">1</td><td class="active">2</td><td class="active">3</td><td class="off">4</td><td class="off">5</td><td class="active">6</td></tr>
+          </table>
+        </div>
+
+        <div class="card feedback">
+          <h4>Student Feedback</h4>
+          <p>Share your thoughts on your classes or mentorship to help us improve your learning experience.</p>
+        </div>
+
+        <div class="card scores">
+          <h4>Recent Test Scores</h4>
+          <canvas id="testChart"></canvas>
+        </div>
+      </section>
+    </main>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="dashbroad.js"></script>
+</body>
+</html>

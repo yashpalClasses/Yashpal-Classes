@@ -1,0 +1,191 @@
+:root {
+  --primary-color: #1e6fd8;
+  --primary-dark: #155bb5;
+  --bg-color: #f9f9fb;
+  --text-color: #333;
+  --card-bg: #fff;
+  --card-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  --border-radius: 12px;
+  --note-bg: #e6f0ff;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+.sidebar {
+  width: 240px;
+  background: var(--primary-color);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  transition: width 0.3s ease;
+}
+.logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.logo-circle {
+  
+  background: #fff;
+  color: var(--primary-color);
+  font-weight: 700;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-text {
+  display: block;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.nav {
+  list-style: none;
+  padding: 0;
+}
+.nav li {
+  padding: 12px 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+.nav li:hover {
+  background: var(--primary-dark);
+}
+.nav .material-icons {
+  margin-right: 10px;
+}
+.logout {
+  margin-top: auto;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--primary-color);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.logout:hover {
+  background: #f0f0f0;
+}
+.main {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  transition: transform 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.welcome {
+  grid-column: span 2;
+}
+.note-box {
+  background: var(--note-bg);
+  padding: 10px;
+  border-radius: 8px;
+}
+.podium {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin: 15px 0;
+  gap: 10px;
+}
+.podium div {
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
+  color: #fff;
+  font-weight: 600;
+  width: 30%;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: height 0.3s ease;
+}
+.second { background: silver; height: 80px; }
+.first { background: gold; height: 100px; }
+.third { background: #cd7f32; height: 60px; }
+.rank {
+  text-align: center;
+  font-weight: 600;
+}
+.calendar table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+.calendar td, .calendar th {
+  padding: 8px;
+}
+.calendar .active {
+  background: #4caf50;
+  color: #fff;
+  border-radius: 6px;
+}
+.calendar .off {
+  background: #ffcccc;
+  border-radius: 6px;
+}
+.mentor-info {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.mentor-info img {
+  border-radius: 50%;
+}
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+  }
+  .sidebar .nav {
+    display: none; /* Hide nav on small screens, could be a dropdown */
+  }
+  .sidebar .logo {
+    margin-bottom: 0;
+  }
+  .sidebar .logout {
+    margin-top: 0;
+  }
+  .main {
+    padding: 1rem;
+  }
+  .welcome {
+    grid-column: span 1;
+  }
+}
