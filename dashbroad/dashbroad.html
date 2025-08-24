@@ -10,11 +10,13 @@
 </head>
 <body>
   <div class="dashboard">
+    <!-- Sidebar -->
     <aside class="sidebar">
-      <div class="logo">
-        <div class="logo-circle">YP</div>
-        <span class="logo-text">YP Classes</span>
+        <div class="logo">
+          <img src="/assets/logo.png" alt="YP Logo" class="logo-img">
+          <span class="logo-text">YP Classes</span>
       </div>
+
       <ul class="nav">
         <li><span class="material-icons">dashboard</span> Dashboard</li>
         <li><span class="material-icons">school</span> Teachers</li>
@@ -28,18 +30,51 @@
       <button class="logout">Log Out</button>
     </aside>
 
+    <!-- Main Content -->
     <main class="main">
-      <section class="main-grid">
-        <div class="card welcome">
-          <h3>Hey Ankush.</h3>
-          <p>Welcome back! We're here to support you on your learning journey. Dive into your classes and keep progressing towards your goals.</p>
+      <h2>Welcome Back, Ankush 👋</h2>
+      <section class="grid">
+        
+        <!-- Student Profile -->
+        <div class="card profile">
+          <img src="https://via.placeholder.com/100" alt="Student">
+          <h4>Ankush Kumar</h4>
+          <p>Class: 12th</p>
+          <p>Email: ankush@email.com</p>
         </div>
 
+        <!-- Mentor Profile -->
+        <div class="card mentor">
+          <h4>Your Mentor</h4>
+          <div class="mentor-info">
+            <img src="/assets/hero.jpg" alt="Mentor">
+            <div>
+              <p><b>Name:</b> Yashpal</p>
+              <p><b>Contact:</b> 9354180547</p>
+              <p>4 Years Experience | 2000+ Students</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Attendance -->
+        <div class="card attendance">
+          <h4>Attendance</h4>
+          <canvas id="attendanceChart"></canvas>
+        </div>
+
+        <!-- Test Scores -->
+        <div class="card scores">
+          <h4>Recent Test Scores</h4>
+          <canvas id="testChart"></canvas>
+        </div>
+
+        <!-- Notifications -->
         <div class="card notifications">
           <h4>🔔 Notifications</h4>
-          <div class="note-box">Conduct Test Next Week. Prepare Chapter 3 Exercise 12 and 14.</div>
+          <p>Conduct Test Next Week: Prepare Chapter 3 Exercise 12 and 14.</p>
         </div>
 
+        <!-- Leaderboard -->
         <div class="card leaderboard">
           <h4>Leaderboard</h4>
           <div class="podium">
@@ -50,52 +85,18 @@
           <div class="rank">4 Ankush</div>
         </div>
 
-        <div class="card profile">
-          <img src="https://via.placeholder.com/100" alt="Student Profile Picture">
-          <h4>12th Class</h4>
-        </div>
-
-        <div class="card attendance">
-          <h4>Attendance</h4>
-          <canvas id="attendanceChart"></canvas>
-        </div>
-
-        <div class="card mentor">
-          <h4>Your Mentor</h4>
-          <div class="mentor-info">
-            <img src="https://via.placeholder.com/80" alt="Mentor Profile Picture">
-            <div>
-              <p><b>Name:</b> Kartik Kumar</p>
-              <p><b>Contact:</b> 8595664069</p>
-              <p>4 Years Experience<br>2000+ Students</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card calendar">
-          <h4>July 2025</h4>
-          <table>
-            <tr>
-              <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
-            </tr>
-            <tr><td></td><td class="active">1</td><td class="active">2</td><td class="active">3</td><td class="off">4</td><td class="off">5</td><td class="active">6</td></tr>
-          </table>
-        </div>
-
+        <!-- Feedback -->
         <div class="card feedback">
           <h4>Student Feedback</h4>
-          <p>Share your thoughts on your classes or mentorship to help us improve your learning experience.</p>
+          <textarea placeholder="Share your thoughts..."></textarea>
+          <button>Submit</button>
         </div>
 
-        <div class="card scores">
-          <h4>Recent Test Scores</h4>
-          <canvas id="testChart"></canvas>
-        </div>
       </section>
     </main>
   </div>
-  
+
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="dashbroad.js"></script>
+  <script src="dashboard.js"></script>
 </body>
 </html>
