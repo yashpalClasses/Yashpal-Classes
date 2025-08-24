@@ -1,197 +1,278 @@
 :root {
   --primary-color: #1e6fd8;
   --primary-dark: #155bb5;
-  --bg-color: #f9f9fb;
+  --bg-color: #f0f2f5;
   --text-color: #333;
   --card-bg: #fff;
-  --card-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  --card-shadow: 0 4px 12px rgba(0,0,0,0.08);
   --border-radius: 12px;
   --note-bg: #e6f0ff;
 }
+
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   background: var(--bg-color);
   color: var(--text-color);
-}
-body,
-html {
-  overflow-x: hidden;
-}
-.dashboard {
-  display: flex;
-  min-height: 100vh;
-}
-.sidebar {
-  width: 240px;
-  background: var(--primary-color);
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  transition: width 0.3s ease;
-}
-.logo {
-  text-align: center;
-  margin-bottom: 30px;
-}
-.logo-text {
-  display: block;
-  font-weight: 600;
-  margin-top: 10px;
-}
-.logo-img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%; /* optional, if you want round logo */
-  object-fit: cover;
-  background: #fff;
-  padding: 5px; /* gives breathing space if circle */
+  line-height: 1.6;
 }
 
-.nav {
-  list-style: none;
-  padding: 0;
+/* ---------- HEADER ---------- */
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--primary-color);
+  padding: 15px 30px;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
-.nav li {
-  padding: 12px 10px;
+
+.logo {
   display: flex;
   align-items: center;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: background 0.2s ease;
+  gap: 10px;
 }
-.nav li:hover {
-  background: var(--primary-dark);
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
 }
-.nav .material-icons {
-  margin-right: 10px;
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 600;
 }
+
 .logout {
-  margin-top: auto;
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
   background: #fff;
   color: var(--primary-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
+
 .logout:hover {
-  background: #f0f0f0;
+  background: #f2f2f2;
+  transform: translateY(-2px);
 }
+
+/* ---------- MAIN CONTENT ---------- */
 .main {
-  flex: 1;
   padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-header {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 25px;
 }
-.main-grid {
+
+h2 {
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin-top: 0;
+}
+
+.grid {
+  /*
+    * This is the key change for a 2x2 grid.
+    * It defines two equal-width columns.
+    */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
 }
+
 .card {
   background: var(--card-bg);
-  padding: 20px;
+  padding: 25px;
   border-radius: var(--border-radius);
   box-shadow: var(--card-shadow);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
-.welcome {
-  grid-column: span 2;
+
+.card h4 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: var(--primary-color);
 }
-.note-box {
+
+/* Specific Card Styles */
+.profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 4px solid var(--primary-color);
+}
+
+.mentor-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.mentor-info img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+}
+
+.notifications {
+  padding: 15px;
+  width: 300px;
   background: var(--note-bg);
-  padding: 10px;
-  border-radius: 8px;
+  border-left: 5px solid var(--primary-color);
 }
+
+.notifications h4 {
+  margin-bottom: 5px;
+}
+
+.notifications p {
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+/* Leaderboard */
 .podium {
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
-  margin: 15px 0;
-  gap: 10px;
+  margin: 20px 0;
+  height: 150px;
 }
-.podium div {
+
+.podium > div {
   text-align: center;
   padding: 10px;
   border-radius: 8px 8px 0 0;
   color: #fff;
   font-weight: 600;
   width: 30%;
-  height: 60px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  transition: height 0.3s ease;
+  align-items: center;
+  transition: all 0.3s ease;
 }
-.second { background: silver; height: 80px; }
-.first { background: gold; height: 100px; }
-.third { background: #cd7f32; height: 60px; }
+
+.first { background: gold; height: 120px; }
+.second { background: silver; height: 100px; }
+.third { background: #cd7f32; height: 80px; }
+
+.podium > div span {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.podium > div span:last-child {
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
 .rank {
   text-align: center;
   font-weight: 600;
-}
-.calendar table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: center;
-}
-.calendar td, .calendar th {
-  padding: 8px;
-}
-.calendar .active {
-  background: #4caf50;
-  color: #fff;
-  border-radius: 6px;
-}
-.calendar .off {
-  background: #ffcccc;
-  border-radius: 6px;
-}
-.mentor-info {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
-.mentor-info img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover; /* ensures image doesn't stretch */
-  border: 2px solid var(--primary-color);
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 10px;
 }
 
+/* Feedback Form */
+.feedback textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+  resize: vertical;
+}
+
+.feedback button {
+  width: 100%;
+  padding: 12px;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.feedback button:hover {
+  background: var(--primary-dark);
+}
+
+/* Attendance Chart (Doughnut) */
+#attendanceChart {
+  width: 250px !important;   /* control size */
+  height: 250px !important;  /* keep it circular */
+  margin: auto;              /* center it */
+  display: block;
+}
+
+/* Test Chart (Bar) - keep full width */
+#testChart {
+  width: 100% !important;
+  height: 300px !important;  /* fixed height for bars */
+}
+
+
+/* ---------- RESPONSIVE DESIGN ---------- */
 @media (max-width: 768px) {
-  .dashboard {
+  .header {
     flex-direction: column;
+    padding: 15px;
   }
-  .sidebar {
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
+  
+  .logo {
+    margin-bottom: 10px;
   }
-  .sidebar .nav {
-    display: none; /* Hide nav on small screens, could be a dropdown */
-  }
-  .sidebar .logo {
-    margin-bottom: 0;
-  }
-  .sidebar .logout {
-    margin-top: 0;
-  }
+
   .main {
     padding: 1rem;
   }
-  .welcome {
-    grid-column: span 1;
+
+  .main-header {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .notifications {
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
   }
 }
