@@ -10,40 +10,31 @@
 </head>
 <body>
   <div class="dashboard">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-        <div class="logo">
-          <img src="/assets/logo.png" alt="YP Logo" class="logo-img">
-          <span class="logo-text">YP Classes</span>
+    <header class="header">
+      <div class="logo">
+        <img src="/assets/logo.png" alt="YP Logo" class="logo-img">
+        <span class="logo-text">YP Classes</span>
+      </div>
+      <!-- <button class="logout">Log Out</button> -->
+    </header>
+
+    <main class="main">
+      <div class="main-header">
+        <h2>Welcome Back, Ankush 👋</h2>
+        <div class="card notifications">
+          <h4>🔔 Notifications</h4>
+          <p>Conduct Test Next Week: Prepare Chapter 3 Exercise 12 and 14.</p>
+        </div>
       </div>
 
-      <ul class="nav">
-        <li><span class="material-icons">dashboard</span> Dashboard</li>
-        <li><span class="material-icons">school</span> Teachers</li>
-        <li><span class="material-icons">group</span> Students</li>
-        <li><span class="material-icons">payments</span> Fees</li>
-        <li><span class="material-icons">event_available</span> Attendance</li>
-        <li><span class="material-icons">schedule</span> Time Table</li>
-        <li><span class="material-icons">message</span> Message</li>
-        <li><span class="material-icons">settings</span> Settings</li>
-      </ul>
-      <button class="logout">Log Out</button>
-    </aside>
-
-    <!-- Main Content -->
-    <main class="main">
-      <h2>Welcome Back, Ankush 👋</h2>
       <section class="grid">
-        
-        <!-- Student Profile -->
         <div class="card profile">
-          <img src="https://via.placeholder.com/100" alt="Student">
+          <img src="/assets/student.jpg" alt="Student">
           <h4>Ankush Kumar</h4>
           <p>Class: 12th</p>
           <p>Email: ankush@email.com</p>
         </div>
 
-        <!-- Mentor Profile -->
         <div class="card mentor">
           <h4>Your Mentor</h4>
           <div class="mentor-info">
@@ -56,47 +47,36 @@
           </div>
         </div>
 
-        <!-- Attendance -->
         <div class="card attendance">
           <h4>Attendance</h4>
           <canvas id="attendanceChart"></canvas>
         </div>
 
-        <!-- Test Scores -->
-        <div class="card scores">
-          <h4>Recent Test Scores</h4>
-          <canvas id="testChart"></canvas>
-        </div>
+        
 
-        <!-- Notifications -->
-        <div class="card notifications">
-          <h4>🔔 Notifications</h4>
-          <p>Conduct Test Next Week: Prepare Chapter 3 Exercise 12 and 14.</p>
-        </div>
-
-        <!-- Leaderboard -->
         <div class="card leaderboard">
           <h4>Leaderboard</h4>
           <div class="podium">
-            <div class="second">2<br>Sonu</div>
-            <div class="first">1<br>Monu</div>
-            <div class="third">3<br>Dimple</div>
+            <div class="second">
+              <span>2</span>
+              <span>Sonu</span>
+            </div>
+            <div class="first">
+              <span>1</span>
+              <span>Monu</span>
+            </div>
+            <div class="third">
+              <span>3</span>
+              <span>Dimple</span>
+            </div>
           </div>
           <div class="rank">4 Ankush</div>
         </div>
-
-        <!-- Feedback -->
-        <div class="card feedback">
-          <h4>Student Feedback</h4>
-          <textarea placeholder="Share your thoughts..."></textarea>
-          <button>Submit</button>
-        </div>
-
       </section>
     </main>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="dashboard.js"></script>
+  <script src="dashbroad.js"></script>
 </body>
 </html>
